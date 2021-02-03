@@ -8,9 +8,24 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Compile Update="src\Form1.cs">
+      <Reference Include="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+        <HintPath>C:\Windows\Microsoft.NET\assembly\GAC_MSIL\System.Windows.Forms\v4.0_4.0.0.0__b77a5c561934e089\System.Windows.Forms.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="src\Forms\Form1.cs">
         <SubType>Form</SubType>
       </Compile>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="src\Model" />
+      <Folder Include="src\Resources" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="MySql.Data" Version="8.0.23" />
     </ItemGroup>
 
 </Project>
