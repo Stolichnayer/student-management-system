@@ -9,8 +9,8 @@ namespace student_management_system
 {
     public static class Program
     {
-        public static Form1 _form1;
-        
+        public static LoginForm LoginForm;
+
         // the main entry point for the application.
 
         [STAThread]
@@ -20,8 +20,8 @@ namespace student_management_system
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             
-            _form1 = new Form1();
-            Application.Run(_form1);
+            LoginForm = new LoginForm();
+            Application.Run(LoginForm);
         }
     }
 }
