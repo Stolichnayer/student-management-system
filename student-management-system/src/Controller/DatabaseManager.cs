@@ -8,6 +8,8 @@ namespace student_management_system.Controller
     // Singleton DatabaseManager class
     public class DatabaseManager
     {
+        public int RowCount;
+            
         private static DatabaseManager _instance;
 
         private string _server;
@@ -15,6 +17,7 @@ namespace student_management_system.Controller
         private string _database;
         private string _user;
         private string _password;
+        
         private DatabaseManager() {}
 
         public static DatabaseManager GetInstance()
@@ -43,22 +46,19 @@ namespace student_management_system.Controller
                 //Try to open connection
                 conn.Open();
 
-                const string query = "SELECT * FROM students";
-                
-                MySqlCommand cmd = new MySqlCommand(query, conn);
-                
-                MySqlDataAdapter mySqlDataAdapter = new MySqlDataAdapter(cmd);
-                
-                DataSet dataset = new DataSet();
-
-                //Fill dataset with query results
-                mySqlDataAdapter.Fill(dataset);
-
-                //Set DataGridView control to read-only
-                //Program._form1.DataGridView1.ReadOnly = true;
-                
-                //Set DataGridView data source to our dataset
-                //Program._form1.DataGridView1.DataSource = dataset.Tables[0];
+                // const string query = "SELECT * FROM students";
+                //
+                // MySqlCommand cmd = new MySqlCommand(query, conn);
+                //
+                // MySqlDataAdapter mySqlDataAdapter = new MySqlDataAdapter(cmd);
+                //
+                // DataSet dataset = new DataSet();
+                //
+                // //Fill dataset with query results
+                // mySqlDataAdapter.Fill(dataset);
+                //
+                // //Set the number of rows
+                // RowCount = dataset.Tables[0].Rows.Count;
 
                 return true;
             }
@@ -101,6 +101,32 @@ namespace student_management_system.Controller
             {
                 MessageBox.Show("Server disconnected...", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
+            }
+        }
+
+        public int ExecuteNonQuery(string query)
+        {
+            //Connection string
+            string connStr =
+                $"server={_server};user={_user};database={_database};port={_port};password={_password}";
+            
+            //MySqlConnection object
+            MySqlConnection conn = new MySqlConnection(connStr);
+
+            try
+            {
+                //Try to open connection
+                conn.Open();
+                
+                //Execute Non Query
+                MySqlCommand command = new MySqlCommand(query, conn);
+                return command.ExecuteNonQuery();
+            }
+            catch (MySqlException e)
+            {
+                MessageBox.Show(e.Message);
+                MessageBox.Show("Server disconnected...", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return -1;
             }
         }
         
