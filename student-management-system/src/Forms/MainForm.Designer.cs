@@ -36,6 +36,10 @@ namespace student_management_system.Forms
             this.addStudentButton = new System.Windows.Forms.Button();
             this.removeStudentButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.otherRadioButton = new System.Windows.Forms.RadioButton();
+            this.maleRadioButton = new System.Windows.Forms.RadioButton();
+            this.femaleRadioButton = new System.Windows.Forms.RadioButton();
             this.genderLabel = new System.Windows.Forms.Label();
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
@@ -57,14 +61,11 @@ namespace student_management_system.Forms
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.maleRadioButton = new System.Windows.Forms.RadioButton();
-            this.femaleRadioButton = new System.Windows.Forms.RadioButton();
-            this.otherRadioButton = new System.Windows.Forms.RadioButton();
+            this.editButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize) (this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.dataGridView1)).BeginInit();
-            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // addStudentButton
@@ -114,7 +115,50 @@ namespace student_management_system.Forms
             this.panel1.Size = new System.Drawing.Size(336, 376);
             this.panel1.TabIndex = 5;
             this.panel1.Visible = false;
-            this.panel1.Leave += new System.EventHandler(this.panel1_Leave);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.groupBox1.Controls.Add(this.otherRadioButton);
+            this.groupBox1.Controls.Add(this.maleRadioButton);
+            this.groupBox1.Controls.Add(this.femaleRadioButton);
+            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.groupBox1.Location = new System.Drawing.Point(115, 130);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(177, 28);
+            this.groupBox1.TabIndex = 20;
+            this.groupBox1.TabStop = false;
+            // 
+            // otherRadioButton
+            // 
+            this.otherRadioButton.Location = new System.Drawing.Point(124, 8);
+            this.otherRadioButton.Name = "otherRadioButton";
+            this.otherRadioButton.Size = new System.Drawing.Size(51, 18);
+            this.otherRadioButton.TabIndex = 23;
+            this.otherRadioButton.Text = "Other";
+            this.otherRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // maleRadioButton
+            // 
+            this.maleRadioButton.Checked = true;
+            this.maleRadioButton.Location = new System.Drawing.Point(5, 8);
+            this.maleRadioButton.Name = "maleRadioButton";
+            this.maleRadioButton.Size = new System.Drawing.Size(48, 18);
+            this.maleRadioButton.TabIndex = 21;
+            this.maleRadioButton.TabStop = true;
+            this.maleRadioButton.Text = "Male";
+            this.maleRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // femaleRadioButton
+            // 
+            this.femaleRadioButton.Location = new System.Drawing.Point(57, 8);
+            this.femaleRadioButton.Name = "femaleRadioButton";
+            this.femaleRadioButton.Size = new System.Drawing.Size(62, 18);
+            this.femaleRadioButton.TabIndex = 22;
+            this.femaleRadioButton.Text = "Female";
+            this.femaleRadioButton.UseVisualStyleBackColor = true;
             // 
             // genderLabel
             // 
@@ -260,11 +304,12 @@ namespace student_management_system.Forms
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 30;
+            this.dataGridView1.RowHeadersWidth = 60;
             this.dataGridView1.Size = new System.Drawing.Size(715, 452);
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_RowEnter);
             this.dataGridView1.RowLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_RowLeave);
+            this.dataGridView1.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dataGridView1_RowPostPaint);
             // 
             // totalStudentsLabel
             // 
@@ -305,49 +350,14 @@ namespace student_management_system.Forms
             this.radioButton3.Text = "Other";
             this.radioButton3.UseVisualStyleBackColor = true;
             // 
-            // groupBox1
+            // editButton
             // 
-            this.groupBox1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.groupBox1.Controls.Add(this.otherRadioButton);
-            this.groupBox1.Controls.Add(this.maleRadioButton);
-            this.groupBox1.Controls.Add(this.femaleRadioButton);
-            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.groupBox1.Location = new System.Drawing.Point(115, 130);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(177, 28);
-            this.groupBox1.TabIndex = 20;
-            this.groupBox1.TabStop = false;
-            // 
-            // maleRadioButton
-            // 
-            this.maleRadioButton.Checked = true;
-            this.maleRadioButton.Location = new System.Drawing.Point(5, 8);
-            this.maleRadioButton.Name = "maleRadioButton";
-            this.maleRadioButton.Size = new System.Drawing.Size(48, 18);
-            this.maleRadioButton.TabIndex = 21;
-            this.maleRadioButton.TabStop = true;
-            this.maleRadioButton.Text = "Male";
-            this.maleRadioButton.UseVisualStyleBackColor = true;
-            // 
-            // femaleRadioButton
-            // 
-            this.femaleRadioButton.Location = new System.Drawing.Point(57, 8);
-            this.femaleRadioButton.Name = "femaleRadioButton";
-            this.femaleRadioButton.Size = new System.Drawing.Size(62, 18);
-            this.femaleRadioButton.TabIndex = 22;
-            this.femaleRadioButton.Text = "Female";
-            this.femaleRadioButton.UseVisualStyleBackColor = true;
-            // 
-            // otherRadioButton
-            // 
-            this.otherRadioButton.Location = new System.Drawing.Point(124, 8);
-            this.otherRadioButton.Name = "otherRadioButton";
-            this.otherRadioButton.Size = new System.Drawing.Size(51, 18);
-            this.otherRadioButton.TabIndex = 23;
-            this.otherRadioButton.Text = "Other";
-            this.otherRadioButton.UseVisualStyleBackColor = true;
+            this.editButton.Location = new System.Drawing.Point(30, 101);
+            this.editButton.Name = "editButton";
+            this.editButton.Size = new System.Drawing.Size(144, 34);
+            this.editButton.TabIndex = 7;
+            this.editButton.Text = "Edit Student";
+            this.editButton.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 
@@ -355,6 +365,7 @@ namespace student_management_system.Forms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(982, 566);
+            this.Controls.Add(this.editButton);
             this.Controls.Add(this.totalStudentsLabel);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.removeStudentButton);
@@ -362,13 +373,16 @@ namespace student_management_system.Forms
             this.Controls.Add(this.dataGridView1);
             this.Name = "MainForm";
             this.Text = "Student Management System";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize) (this.numericUpDown2)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.dataGridView1)).EndInit();
-            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
         }
+
+        private System.Windows.Forms.Button editButton;
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton maleRadioButton;

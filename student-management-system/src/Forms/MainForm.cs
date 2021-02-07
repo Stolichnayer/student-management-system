@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
-using System.Threading;
+using System.Drawing;
+using System.Reflection;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using student_management_system.Controller;
@@ -33,6 +34,16 @@ namespace student_management_system.Forms
             DataGridView1.Columns[4].HeaderText = "Birth date";
             DataGridView1.Columns[5].HeaderText = "Reg. date";
             DataGridView1.Columns[6].HeaderText = "GPA";
+        }
+
+        private void SetColorEverySecondRow()
+        {
+            for (int i = 0; i < DataGridView1.Rows.Count; i += 2)
+            {
+                DataGridView1.Rows[i].DefaultCellStyle.BackColor = Color.LightBlue;
+            }
+
+            
         }
 
         private void cancelButton_Click(object sender, EventArgs e)
@@ -133,14 +144,9 @@ namespace student_management_system.Forms
             }
         }
 
-        private void dataGridView1_Leave(object sender, EventArgs e)
-        {
-
-        }
-
         private void dataGridView1_RowLeave(object sender, DataGridViewCellEventArgs e)
         {
-            removeStudentButton.Enabled = false;
+            //removeStudentButton.Enabled = false;
 
         }
 
@@ -149,9 +155,28 @@ namespace student_management_system.Forms
             removeStudentButton.Enabled = true;
         }
 
-        private void panel1_Leave(object sender, EventArgs e)
+        private void dataGridView1_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
         {
+            SetColorEverySecondRow();
+            SetRowHeaderNumber();
+        }
 
+        private void SetRowHeaderNumber()
+        {
+            Console.Out.Write("ti fasi?");
+
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            //Added this to solve flickering issue at the DataGrid. Works like a charm and also fixed the flickering
+            //when the Add Student panel opens. 10/10.
+            //Source:
+            //stackoverflow.com/questions/41893708/how-to-prevent-datagridview-from-flickering-when-scrolling-horizontally
+            // MessageBoxes disappeared.
+            DataGridView1.GetType()
+                .GetProperty("DoubleBuffered", BindingFlags.Instance | BindingFlags.NonPublic)
+                ?.SetValue(DataGridView1, true, null);
         }
     }
 }
