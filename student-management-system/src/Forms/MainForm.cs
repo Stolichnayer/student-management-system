@@ -20,7 +20,7 @@ namespace student_management_system.Forms
 
         private void UpdateDataGrid()
         {
-            const string query = "SELECT * FROM students_copy1";
+            const string query = "SELECT * FROM students";
 
             DataSet dataset = DatabaseManager.GetInstance().ExecuteQuery(query);
 
@@ -181,7 +181,7 @@ namespace student_management_system.Forms
             string gpa = numericUpDownGPA_AddP.Text;
 
             string query
-                = "INSERT INTO students_copy1 (firstName, lastName, email, gender, birthDate, regDate, gpa) VALUES (" +
+                = "INSERT INTO students (firstName, lastName, email, gender, birthDate, regDate, gpa) VALUES (" +
                   $"\"{firstName}\", \"{lastName}\", \"{email}\", \"{gender}\", \"{birthDate}\", \"{regDate}\", {gpa})";
 
             Console.Out.WriteLine(query);
@@ -217,7 +217,7 @@ namespace student_management_system.Forms
 
             if (result == DialogResult.Yes)
             {
-                string query = $"DELETE FROM students_copy1 WHERE regID = {regID}";
+                string query = $"DELETE FROM students WHERE regID = {regID}";
                 DatabaseManager.GetInstance().ExecuteNonQuery(query);
 
                 int? row = dataGridView1.CurrentRow?.Index;
