@@ -35,44 +35,68 @@ namespace student_management_system.Forms
         {
             this.addStudentButton = new System.Windows.Forms.Button();
             this.removeStudentButton = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.otherRadioButton = new System.Windows.Forms.RadioButton();
-            this.maleRadioButton = new System.Windows.Forms.RadioButton();
-            this.femaleRadioButton = new System.Windows.Forms.RadioButton();
-            this.genderLabel = new System.Windows.Forms.Label();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.clearButton = new System.Windows.Forms.Button();
-            this.cancelButton = new System.Windows.Forms.Button();
-            this.addButton = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.addPanel = new System.Windows.Forms.Panel();
+            this.groupBox1_AddP = new System.Windows.Forms.GroupBox();
+            this.otherRadioButton_AddP = new System.Windows.Forms.RadioButton();
+            this.maleRadioButton_AddP = new System.Windows.Forms.RadioButton();
+            this.femaleRadioButton_AddP = new System.Windows.Forms.RadioButton();
+            this.genderLabel_AddP = new System.Windows.Forms.Label();
+            this.numericUpDownGPA_AddP = new System.Windows.Forms.NumericUpDown();
+            this.dateTimePickerBirth_AddP = new System.Windows.Forms.DateTimePicker();
+            this.clearButton_AddP = new System.Windows.Forms.Button();
+            this.cancelButton_AddP = new System.Windows.Forms.Button();
+            this.addButton_AddP = new System.Windows.Forms.Button();
+            this.dateTimePickerReg_AddP = new System.Windows.Forms.DateTimePicker();
+            this.textBoxEmail_AddP = new System.Windows.Forms.TextBox();
+            this.textBoxLname_AddP = new System.Windows.Forms.TextBox();
+            this.textBoxFname_AddP = new System.Windows.Forms.TextBox();
+            this.birthLabel_AddP = new System.Windows.Forms.Label();
+            this.gpaLabel_AddP = new System.Windows.Forms.Label();
+            this.regLabel_AddP = new System.Windows.Forms.Label();
+            this.emailLabel_AddP = new System.Windows.Forms.Label();
+            this.lnameLabel_AddP = new System.Windows.Forms.Label();
+            this.fnameLabel_AddP = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.totalStudentsLabel = new System.Windows.Forms.Label();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.editButton = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize) (this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize) (this.dataGridView1)).BeginInit();
+            this.editPanel = new System.Windows.Forms.Panel();
+            this.groupBox1_EditP = new System.Windows.Forms.GroupBox();
+            this.otherRadioButton_EditP = new System.Windows.Forms.RadioButton();
+            this.maleRadioButton_EditP = new System.Windows.Forms.RadioButton();
+            this.femaleRadioButton_EditP = new System.Windows.Forms.RadioButton();
+            this.genderLabel_EditP = new System.Windows.Forms.Label();
+            this.numericUpDownGPA_EditP = new System.Windows.Forms.NumericUpDown();
+            this.dateTimePickerBirth_EditP = new System.Windows.Forms.DateTimePicker();
+            this.cancelButton_EditP = new System.Windows.Forms.Button();
+            this.OKButton_EditP = new System.Windows.Forms.Button();
+            this.dateTimePickerReg_EditP = new System.Windows.Forms.DateTimePicker();
+            this.textBoxEmail_EditP = new System.Windows.Forms.TextBox();
+            this.textBoxLname_EditP = new System.Windows.Forms.TextBox();
+            this.textBoxFname_EditP = new System.Windows.Forms.TextBox();
+            this.birthLabel_EditP = new System.Windows.Forms.Label();
+            this.gpaLabel_EditP = new System.Windows.Forms.Label();
+            this.regLabel_EditP = new System.Windows.Forms.Label();
+            this.emailLabel_EditP = new System.Windows.Forms.Label();
+            this.lnameLabel_EditP = new System.Windows.Forms.Label();
+            this.fnameLabel_EditP = new System.Windows.Forms.Label();
+            this.addPanel.SuspendLayout();
+            this.groupBox1_AddP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGPA_AddP)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.editPanel.SuspendLayout();
+            this.groupBox1_EditP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGPA_EditP)).BeginInit();
             this.SuspendLayout();
             // 
             // addStudentButton
             // 
-            this.addStudentButton.Location = new System.Drawing.Point(30, 21);
+            this.addStudentButton.Location = new System.Drawing.Point(35, 24);
+            this.addStudentButton.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.addStudentButton.Name = "addStudentButton";
-            this.addStudentButton.Size = new System.Drawing.Size(144, 34);
+            this.addStudentButton.Size = new System.Drawing.Size(168, 39);
             this.addStudentButton.TabIndex = 3;
             this.addStudentButton.Text = "Add student";
             this.addStudentButton.UseVisualStyleBackColor = true;
@@ -80,232 +104,260 @@ namespace student_management_system.Forms
             // 
             // removeStudentButton
             // 
-            this.removeStudentButton.Location = new System.Drawing.Point(30, 61);
+            this.removeStudentButton.Location = new System.Drawing.Point(35, 70);
+            this.removeStudentButton.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.removeStudentButton.Name = "removeStudentButton";
-            this.removeStudentButton.Size = new System.Drawing.Size(144, 34);
+            this.removeStudentButton.Size = new System.Drawing.Size(168, 39);
             this.removeStudentButton.TabIndex = 4;
             this.removeStudentButton.Text = "Remove student";
             this.removeStudentButton.UseVisualStyleBackColor = true;
             this.removeStudentButton.Click += new System.EventHandler(this.removeStudentButton_Click);
             // 
-            // panel1
+            // addPanel
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.Control;
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.groupBox1);
-            this.panel1.Controls.Add(this.genderLabel);
-            this.panel1.Controls.Add(this.numericUpDown2);
-            this.panel1.Controls.Add(this.dateTimePicker2);
-            this.panel1.Controls.Add(this.clearButton);
-            this.panel1.Controls.Add(this.cancelButton);
-            this.panel1.Controls.Add(this.addButton);
-            this.panel1.Controls.Add(this.dateTimePicker1);
-            this.panel1.Controls.Add(this.textBox4);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(180, 21);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(336, 376);
-            this.panel1.TabIndex = 5;
-            this.panel1.Visible = false;
+            this.addPanel.BackColor = System.Drawing.SystemColors.Control;
+            this.addPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.addPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.addPanel.Controls.Add(this.groupBox1_AddP);
+            this.addPanel.Controls.Add(this.genderLabel_AddP);
+            this.addPanel.Controls.Add(this.numericUpDownGPA_AddP);
+            this.addPanel.Controls.Add(this.dateTimePickerBirth_AddP);
+            this.addPanel.Controls.Add(this.clearButton_AddP);
+            this.addPanel.Controls.Add(this.cancelButton_AddP);
+            this.addPanel.Controls.Add(this.addButton_AddP);
+            this.addPanel.Controls.Add(this.dateTimePickerReg_AddP);
+            this.addPanel.Controls.Add(this.textBoxEmail_AddP);
+            this.addPanel.Controls.Add(this.textBoxLname_AddP);
+            this.addPanel.Controls.Add(this.textBoxFname_AddP);
+            this.addPanel.Controls.Add(this.birthLabel_AddP);
+            this.addPanel.Controls.Add(this.gpaLabel_AddP);
+            this.addPanel.Controls.Add(this.regLabel_AddP);
+            this.addPanel.Controls.Add(this.emailLabel_AddP);
+            this.addPanel.Controls.Add(this.lnameLabel_AddP);
+            this.addPanel.Controls.Add(this.fnameLabel_AddP);
+            this.addPanel.Location = new System.Drawing.Point(210, 24);
+            this.addPanel.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.addPanel.Name = "addPanel";
+            this.addPanel.Size = new System.Drawing.Size(392, 434);
+            this.addPanel.TabIndex = 5;
+            this.addPanel.Visible = false;
             // 
-            // groupBox1
+            // groupBox1_AddP
             // 
-            this.groupBox1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.groupBox1.Controls.Add(this.otherRadioButton);
-            this.groupBox1.Controls.Add(this.maleRadioButton);
-            this.groupBox1.Controls.Add(this.femaleRadioButton);
-            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.groupBox1.Location = new System.Drawing.Point(115, 130);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(177, 28);
-            this.groupBox1.TabIndex = 20;
-            this.groupBox1.TabStop = false;
+            this.groupBox1_AddP.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.groupBox1_AddP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.groupBox1_AddP.Controls.Add(this.otherRadioButton_AddP);
+            this.groupBox1_AddP.Controls.Add(this.maleRadioButton_AddP);
+            this.groupBox1_AddP.Controls.Add(this.femaleRadioButton_AddP);
+            this.groupBox1_AddP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox1_AddP.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.groupBox1_AddP.Location = new System.Drawing.Point(134, 150);
+            this.groupBox1_AddP.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.groupBox1_AddP.Name = "groupBox1_AddP";
+            this.groupBox1_AddP.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.groupBox1_AddP.Size = new System.Drawing.Size(206, 32);
+            this.groupBox1_AddP.TabIndex = 20;
+            this.groupBox1_AddP.TabStop = false;
             // 
-            // otherRadioButton
+            // otherRadioButton_AddP
             // 
-            this.otherRadioButton.Location = new System.Drawing.Point(124, 8);
-            this.otherRadioButton.Name = "otherRadioButton";
-            this.otherRadioButton.Size = new System.Drawing.Size(51, 18);
-            this.otherRadioButton.TabIndex = 23;
-            this.otherRadioButton.Text = "Other";
-            this.otherRadioButton.UseVisualStyleBackColor = true;
+            this.otherRadioButton_AddP.Location = new System.Drawing.Point(145, 9);
+            this.otherRadioButton_AddP.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.otherRadioButton_AddP.Name = "otherRadioButton_AddP";
+            this.otherRadioButton_AddP.Size = new System.Drawing.Size(59, 21);
+            this.otherRadioButton_AddP.TabIndex = 23;
+            this.otherRadioButton_AddP.Text = "Other";
+            this.otherRadioButton_AddP.UseVisualStyleBackColor = true;
             // 
-            // maleRadioButton
+            // maleRadioButton_AddP
             // 
-            this.maleRadioButton.Checked = true;
-            this.maleRadioButton.Location = new System.Drawing.Point(5, 8);
-            this.maleRadioButton.Name = "maleRadioButton";
-            this.maleRadioButton.Size = new System.Drawing.Size(48, 18);
-            this.maleRadioButton.TabIndex = 21;
-            this.maleRadioButton.TabStop = true;
-            this.maleRadioButton.Text = "Male";
-            this.maleRadioButton.UseVisualStyleBackColor = true;
+            this.maleRadioButton_AddP.Checked = true;
+            this.maleRadioButton_AddP.Location = new System.Drawing.Point(6, 9);
+            this.maleRadioButton_AddP.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.maleRadioButton_AddP.Name = "maleRadioButton_AddP";
+            this.maleRadioButton_AddP.Size = new System.Drawing.Size(56, 21);
+            this.maleRadioButton_AddP.TabIndex = 21;
+            this.maleRadioButton_AddP.TabStop = true;
+            this.maleRadioButton_AddP.Text = "Male";
+            this.maleRadioButton_AddP.UseVisualStyleBackColor = true;
             // 
-            // femaleRadioButton
+            // femaleRadioButton_AddP
             // 
-            this.femaleRadioButton.Location = new System.Drawing.Point(57, 8);
-            this.femaleRadioButton.Name = "femaleRadioButton";
-            this.femaleRadioButton.Size = new System.Drawing.Size(62, 18);
-            this.femaleRadioButton.TabIndex = 22;
-            this.femaleRadioButton.Text = "Female";
-            this.femaleRadioButton.UseVisualStyleBackColor = true;
+            this.femaleRadioButton_AddP.Location = new System.Drawing.Point(66, 9);
+            this.femaleRadioButton_AddP.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.femaleRadioButton_AddP.Name = "femaleRadioButton_AddP";
+            this.femaleRadioButton_AddP.Size = new System.Drawing.Size(72, 21);
+            this.femaleRadioButton_AddP.TabIndex = 22;
+            this.femaleRadioButton_AddP.Text = "Female";
+            this.femaleRadioButton_AddP.UseVisualStyleBackColor = true;
             // 
-            // genderLabel
+            // genderLabel_AddP
             // 
-            this.genderLabel.Location = new System.Drawing.Point(38, 135);
-            this.genderLabel.Name = "genderLabel";
-            this.genderLabel.Size = new System.Drawing.Size(71, 18);
-            this.genderLabel.TabIndex = 19;
-            this.genderLabel.Text = "Gender";
+            this.genderLabel_AddP.Location = new System.Drawing.Point(44, 156);
+            this.genderLabel_AddP.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.genderLabel_AddP.Name = "genderLabel_AddP";
+            this.genderLabel_AddP.Size = new System.Drawing.Size(83, 21);
+            this.genderLabel_AddP.TabIndex = 19;
+            this.genderLabel_AddP.Text = "Gender";
             // 
-            // numericUpDown2
+            // numericUpDownGPA_AddP
             // 
-            this.numericUpDown2.DecimalPlaces = 2;
-            this.numericUpDown2.Location = new System.Drawing.Point(116, 232);
-            this.numericUpDown2.Maximum = new decimal(new int[] {10, 0, 0, 0});
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(95, 20);
-            this.numericUpDown2.TabIndex = 18;
+            this.numericUpDownGPA_AddP.DecimalPlaces = 2;
+            this.numericUpDownGPA_AddP.Location = new System.Drawing.Point(135, 268);
+            this.numericUpDownGPA_AddP.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.numericUpDownGPA_AddP.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.numericUpDownGPA_AddP.Name = "numericUpDownGPA_AddP";
+            this.numericUpDownGPA_AddP.Size = new System.Drawing.Size(111, 23);
+            this.numericUpDownGPA_AddP.TabIndex = 18;
             // 
-            // dateTimePicker2
+            // dateTimePickerBirth_AddP
             // 
-            this.dateTimePicker2.CustomFormat = "dd-MM-yyy";
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker2.Location = new System.Drawing.Point(116, 168);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(95, 20);
-            this.dateTimePicker2.TabIndex = 16;
-            this.dateTimePicker2.Value = new System.DateTime(2003, 1, 1, 0, 0, 0, 0);
+            this.dateTimePickerBirth_AddP.CustomFormat = "dd-MM-yyy";
+            this.dateTimePickerBirth_AddP.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePickerBirth_AddP.Location = new System.Drawing.Point(135, 194);
+            this.dateTimePickerBirth_AddP.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.dateTimePickerBirth_AddP.Name = "dateTimePickerBirth_AddP";
+            this.dateTimePickerBirth_AddP.Size = new System.Drawing.Size(110, 23);
+            this.dateTimePickerBirth_AddP.TabIndex = 16;
+            this.dateTimePickerBirth_AddP.Value = new System.DateTime(2003, 1, 1, 0, 0, 0, 0);
             // 
-            // clearButton
+            // clearButton_AddP
             // 
-            this.clearButton.Location = new System.Drawing.Point(11, 340);
-            this.clearButton.Name = "clearButton";
-            this.clearButton.Size = new System.Drawing.Size(68, 24);
-            this.clearButton.TabIndex = 15;
-            this.clearButton.Text = "Clear";
-            this.clearButton.UseVisualStyleBackColor = true;
-            this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
+            this.clearButton_AddP.Location = new System.Drawing.Point(13, 392);
+            this.clearButton_AddP.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.clearButton_AddP.Name = "clearButton_AddP";
+            this.clearButton_AddP.Size = new System.Drawing.Size(79, 28);
+            this.clearButton_AddP.TabIndex = 15;
+            this.clearButton_AddP.Text = "Clear";
+            this.clearButton_AddP.UseVisualStyleBackColor = true;
+            this.clearButton_AddP.Click += new System.EventHandler(this.clearButton_Click);
             // 
-            // cancelButton
+            // cancelButton_AddP
             // 
-            this.cancelButton.Location = new System.Drawing.Point(166, 340);
-            this.cancelButton.Name = "cancelButton";
-            this.cancelButton.Size = new System.Drawing.Size(68, 24);
-            this.cancelButton.TabIndex = 14;
-            this.cancelButton.Text = "Cancel";
-            this.cancelButton.UseVisualStyleBackColor = true;
-            this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
+            this.cancelButton_AddP.Location = new System.Drawing.Point(194, 392);
+            this.cancelButton_AddP.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.cancelButton_AddP.Name = "cancelButton_AddP";
+            this.cancelButton_AddP.Size = new System.Drawing.Size(79, 28);
+            this.cancelButton_AddP.TabIndex = 14;
+            this.cancelButton_AddP.Text = "Cancel";
+            this.cancelButton_AddP.UseVisualStyleBackColor = true;
+            this.cancelButton_AddP.Click += new System.EventHandler(this.cancelButton_Click);
             // 
-            // addButton
+            // addButton_AddP
             // 
-            this.addButton.Location = new System.Drawing.Point(240, 340);
-            this.addButton.Name = "addButton";
-            this.addButton.Size = new System.Drawing.Size(68, 24);
-            this.addButton.TabIndex = 13;
-            this.addButton.Text = "Add";
-            this.addButton.UseVisualStyleBackColor = true;
-            this.addButton.Click += new System.EventHandler(this.addButton_Click);
+            this.addButton_AddP.Location = new System.Drawing.Point(280, 392);
+            this.addButton_AddP.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.addButton_AddP.Name = "addButton_AddP";
+            this.addButton_AddP.Size = new System.Drawing.Size(79, 28);
+            this.addButton_AddP.TabIndex = 13;
+            this.addButton_AddP.Text = "Add";
+            this.addButton_AddP.UseVisualStyleBackColor = true;
+            this.addButton_AddP.Click += new System.EventHandler(this.addButton_Click);
             // 
-            // dateTimePicker1
+            // dateTimePickerReg_AddP
             // 
-            this.dateTimePicker1.CustomFormat = "dd-MM-yyy";
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(116, 196);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(95, 20);
-            this.dateTimePicker1.TabIndex = 11;
-            this.dateTimePicker1.Value = new System.DateTime(2021, 2, 5, 1, 7, 54, 0);
+            this.dateTimePickerReg_AddP.CustomFormat = "dd-MM-yyy";
+            this.dateTimePickerReg_AddP.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePickerReg_AddP.Location = new System.Drawing.Point(135, 226);
+            this.dateTimePickerReg_AddP.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.dateTimePickerReg_AddP.Name = "dateTimePickerReg_AddP";
+            this.dateTimePickerReg_AddP.Size = new System.Drawing.Size(110, 23);
+            this.dateTimePickerReg_AddP.TabIndex = 11;
+            this.dateTimePickerReg_AddP.Value = new System.DateTime(2021, 2, 5, 1, 7, 54, 0);
             // 
-            // textBox4
+            // textBoxEmail_AddP
             // 
-            this.textBox4.Location = new System.Drawing.Point(116, 104);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(176, 20);
-            this.textBox4.TabIndex = 10;
+            this.textBoxEmail_AddP.Location = new System.Drawing.Point(135, 120);
+            this.textBoxEmail_AddP.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.textBoxEmail_AddP.Name = "textBoxEmail_AddP";
+            this.textBoxEmail_AddP.Size = new System.Drawing.Size(205, 23);
+            this.textBoxEmail_AddP.TabIndex = 10;
             // 
-            // textBox2
+            // textBoxLname_AddP
             // 
-            this.textBox2.Location = new System.Drawing.Point(116, 74);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(176, 20);
-            this.textBox2.TabIndex = 8;
+            this.textBoxLname_AddP.Location = new System.Drawing.Point(135, 85);
+            this.textBoxLname_AddP.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.textBoxLname_AddP.Name = "textBoxLname_AddP";
+            this.textBoxLname_AddP.Size = new System.Drawing.Size(205, 23);
+            this.textBoxLname_AddP.TabIndex = 8;
             // 
-            // textBox1
+            // textBoxFname_AddP
             // 
-            this.textBox1.Location = new System.Drawing.Point(116, 40);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(176, 20);
-            this.textBox1.TabIndex = 7;
+            this.textBoxFname_AddP.Location = new System.Drawing.Point(135, 46);
+            this.textBoxFname_AddP.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.textBoxFname_AddP.Name = "textBoxFname_AddP";
+            this.textBoxFname_AddP.Size = new System.Drawing.Size(205, 23);
+            this.textBoxFname_AddP.TabIndex = 7;
             // 
-            // label7
+            // birthLabel_AddP
             // 
-            this.label7.Location = new System.Drawing.Point(38, 168);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(72, 15);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "Birth Date";
+            this.birthLabel_AddP.Location = new System.Drawing.Point(44, 194);
+            this.birthLabel_AddP.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.birthLabel_AddP.Name = "birthLabel_AddP";
+            this.birthLabel_AddP.Size = new System.Drawing.Size(84, 17);
+            this.birthLabel_AddP.TabIndex = 6;
+            this.birthLabel_AddP.Text = "Birth Date";
             // 
-            // label6
+            // gpaLabel_AddP
             // 
-            this.label6.Location = new System.Drawing.Point(38, 234);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(72, 15);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "GPA";
+            this.gpaLabel_AddP.Location = new System.Drawing.Point(44, 270);
+            this.gpaLabel_AddP.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.gpaLabel_AddP.Name = "gpaLabel_AddP";
+            this.gpaLabel_AddP.Size = new System.Drawing.Size(84, 17);
+            this.gpaLabel_AddP.TabIndex = 5;
+            this.gpaLabel_AddP.Text = "GPA";
             // 
-            // label5
+            // regLabel_AddP
             // 
-            this.label5.Location = new System.Drawing.Point(38, 201);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(72, 15);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Reg. Date";
+            this.regLabel_AddP.Location = new System.Drawing.Point(44, 232);
+            this.regLabel_AddP.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.regLabel_AddP.Name = "regLabel_AddP";
+            this.regLabel_AddP.Size = new System.Drawing.Size(84, 17);
+            this.regLabel_AddP.TabIndex = 4;
+            this.regLabel_AddP.Text = "Reg. Date";
             // 
-            // label4
+            // emailLabel_AddP
             // 
-            this.label4.Location = new System.Drawing.Point(38, 109);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(72, 15);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Email";
+            this.emailLabel_AddP.Location = new System.Drawing.Point(44, 126);
+            this.emailLabel_AddP.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.emailLabel_AddP.Name = "emailLabel_AddP";
+            this.emailLabel_AddP.Size = new System.Drawing.Size(84, 17);
+            this.emailLabel_AddP.TabIndex = 3;
+            this.emailLabel_AddP.Text = "Email";
             // 
-            // label2
+            // lnameLabel_AddP
             // 
-            this.label2.Location = new System.Drawing.Point(38, 74);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 15);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Last name";
+            this.lnameLabel_AddP.Location = new System.Drawing.Point(44, 85);
+            this.lnameLabel_AddP.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lnameLabel_AddP.Name = "lnameLabel_AddP";
+            this.lnameLabel_AddP.Size = new System.Drawing.Size(84, 17);
+            this.lnameLabel_AddP.TabIndex = 1;
+            this.lnameLabel_AddP.Text = "Last name";
             // 
-            // label1
+            // fnameLabel_AddP
             // 
-            this.label1.Location = new System.Drawing.Point(38, 40);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 15);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "First name";
+            this.fnameLabel_AddP.Location = new System.Drawing.Point(44, 46);
+            this.fnameLabel_AddP.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.fnameLabel_AddP.Name = "fnameLabel_AddP";
+            this.fnameLabel_AddP.Size = new System.Drawing.Size(84, 17);
+            this.fnameLabel_AddP.TabIndex = 0;
+            this.fnameLabel_AddP.Text = "First name";
             // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(201, 12);
+            this.dataGridView1.Location = new System.Drawing.Point(234, 14);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 60;
-            this.dataGridView1.Size = new System.Drawing.Size(715, 452);
+            this.dataGridView1.Size = new System.Drawing.Size(834, 522);
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_RowEnter);
             this.dataGridView1.RowLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_RowLeave);
@@ -313,10 +365,11 @@ namespace student_management_system.Forms
             // 
             // totalStudentsLabel
             // 
-            this.totalStudentsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.totalStudentsLabel.Location = new System.Drawing.Point(204, 474);
+            this.totalStudentsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.totalStudentsLabel.Location = new System.Drawing.Point(238, 547);
+            this.totalStudentsLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.totalStudentsLabel.Name = "totalStudentsLabel";
-            this.totalStudentsLabel.Size = new System.Drawing.Size(186, 29);
+            this.totalStudentsLabel.Size = new System.Drawing.Size(217, 33);
             this.totalStudentsLabel.TabIndex = 6;
             this.totalStudentsLabel.Text = "Total students:";
             // 
@@ -352,44 +405,272 @@ namespace student_management_system.Forms
             // 
             // editButton
             // 
-            this.editButton.Location = new System.Drawing.Point(30, 101);
+            this.editButton.Location = new System.Drawing.Point(35, 117);
+            this.editButton.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.editButton.Name = "editButton";
-            this.editButton.Size = new System.Drawing.Size(144, 34);
+            this.editButton.Size = new System.Drawing.Size(168, 39);
             this.editButton.TabIndex = 7;
             this.editButton.Text = "Edit Student";
             this.editButton.UseVisualStyleBackColor = true;
             // 
+            // editPanel
+            // 
+            this.editPanel.BackColor = System.Drawing.SystemColors.Control;
+            this.editPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.editPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.editPanel.Controls.Add(this.groupBox1_EditP);
+            this.editPanel.Controls.Add(this.genderLabel_EditP);
+            this.editPanel.Controls.Add(this.numericUpDownGPA_EditP);
+            this.editPanel.Controls.Add(this.dateTimePickerBirth_EditP);
+            this.editPanel.Controls.Add(this.cancelButton_EditP);
+            this.editPanel.Controls.Add(this.OKButton_EditP);
+            this.editPanel.Controls.Add(this.dateTimePickerReg_EditP);
+            this.editPanel.Controls.Add(this.textBoxEmail_EditP);
+            this.editPanel.Controls.Add(this.textBoxLname_EditP);
+            this.editPanel.Controls.Add(this.textBoxFname_EditP);
+            this.editPanel.Controls.Add(this.birthLabel_EditP);
+            this.editPanel.Controls.Add(this.gpaLabel_EditP);
+            this.editPanel.Controls.Add(this.regLabel_EditP);
+            this.editPanel.Controls.Add(this.emailLabel_EditP);
+            this.editPanel.Controls.Add(this.lnameLabel_EditP);
+            this.editPanel.Controls.Add(this.fnameLabel_EditP);
+            this.editPanel.Location = new System.Drawing.Point(610, 24);
+            this.editPanel.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.editPanel.Name = "editPanel";
+            this.editPanel.Size = new System.Drawing.Size(392, 434);
+            this.editPanel.TabIndex = 21;
+            this.editPanel.Visible = false;
+            // 
+            // groupBox1_EditP
+            // 
+            this.groupBox1_EditP.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.groupBox1_EditP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.groupBox1_EditP.Controls.Add(this.otherRadioButton_EditP);
+            this.groupBox1_EditP.Controls.Add(this.maleRadioButton_EditP);
+            this.groupBox1_EditP.Controls.Add(this.femaleRadioButton_EditP);
+            this.groupBox1_EditP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox1_EditP.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.groupBox1_EditP.Location = new System.Drawing.Point(134, 150);
+            this.groupBox1_EditP.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.groupBox1_EditP.Name = "groupBox1_EditP";
+            this.groupBox1_EditP.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.groupBox1_EditP.Size = new System.Drawing.Size(206, 32);
+            this.groupBox1_EditP.TabIndex = 20;
+            this.groupBox1_EditP.TabStop = false;
+            // 
+            // otherRadioButton_EditP
+            // 
+            this.otherRadioButton_EditP.Location = new System.Drawing.Point(145, 9);
+            this.otherRadioButton_EditP.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.otherRadioButton_EditP.Name = "otherRadioButton_EditP";
+            this.otherRadioButton_EditP.Size = new System.Drawing.Size(59, 21);
+            this.otherRadioButton_EditP.TabIndex = 23;
+            this.otherRadioButton_EditP.Text = "Other";
+            this.otherRadioButton_EditP.UseVisualStyleBackColor = true;
+            // 
+            // maleRadioButton_EditP
+            // 
+            this.maleRadioButton_EditP.Checked = true;
+            this.maleRadioButton_EditP.Location = new System.Drawing.Point(6, 9);
+            this.maleRadioButton_EditP.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.maleRadioButton_EditP.Name = "maleRadioButton_EditP";
+            this.maleRadioButton_EditP.Size = new System.Drawing.Size(56, 21);
+            this.maleRadioButton_EditP.TabIndex = 21;
+            this.maleRadioButton_EditP.TabStop = true;
+            this.maleRadioButton_EditP.Text = "Male";
+            this.maleRadioButton_EditP.UseVisualStyleBackColor = true;
+            // 
+            // femaleRadioButton_EditP
+            // 
+            this.femaleRadioButton_EditP.Location = new System.Drawing.Point(66, 9);
+            this.femaleRadioButton_EditP.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.femaleRadioButton_EditP.Name = "femaleRadioButton_EditP";
+            this.femaleRadioButton_EditP.Size = new System.Drawing.Size(72, 21);
+            this.femaleRadioButton_EditP.TabIndex = 22;
+            this.femaleRadioButton_EditP.Text = "Female";
+            this.femaleRadioButton_EditP.UseVisualStyleBackColor = true;
+            // 
+            // genderLabel_EditP
+            // 
+            this.genderLabel_EditP.Location = new System.Drawing.Point(44, 156);
+            this.genderLabel_EditP.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.genderLabel_EditP.Name = "genderLabel_EditP";
+            this.genderLabel_EditP.Size = new System.Drawing.Size(83, 21);
+            this.genderLabel_EditP.TabIndex = 19;
+            this.genderLabel_EditP.Text = "Gender";
+            // 
+            // numericUpDownGPA_EditP
+            // 
+            this.numericUpDownGPA_EditP.DecimalPlaces = 2;
+            this.numericUpDownGPA_EditP.Location = new System.Drawing.Point(135, 268);
+            this.numericUpDownGPA_EditP.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.numericUpDownGPA_EditP.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.numericUpDownGPA_EditP.Name = "numericUpDownGPA_EditP";
+            this.numericUpDownGPA_EditP.Size = new System.Drawing.Size(111, 23);
+            this.numericUpDownGPA_EditP.TabIndex = 18;
+            // 
+            // dateTimePickerBirth_EditP
+            // 
+            this.dateTimePickerBirth_EditP.CustomFormat = "dd-MM-yyy";
+            this.dateTimePickerBirth_EditP.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePickerBirth_EditP.Location = new System.Drawing.Point(135, 194);
+            this.dateTimePickerBirth_EditP.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.dateTimePickerBirth_EditP.Name = "dateTimePickerBirth_EditP";
+            this.dateTimePickerBirth_EditP.Size = new System.Drawing.Size(110, 23);
+            this.dateTimePickerBirth_EditP.TabIndex = 16;
+            this.dateTimePickerBirth_EditP.Value = new System.DateTime(2003, 1, 1, 0, 0, 0, 0);
+            // 
+            // cancelButton_EditP
+            // 
+            this.cancelButton_EditP.Location = new System.Drawing.Point(194, 392);
+            this.cancelButton_EditP.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.cancelButton_EditP.Name = "cancelButton_EditP";
+            this.cancelButton_EditP.Size = new System.Drawing.Size(79, 28);
+            this.cancelButton_EditP.TabIndex = 14;
+            this.cancelButton_EditP.Text = "Cancel";
+            this.cancelButton_EditP.UseVisualStyleBackColor = true;
+            // 
+            // OKButton_EditP
+            // 
+            this.OKButton_EditP.Location = new System.Drawing.Point(280, 392);
+            this.OKButton_EditP.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.OKButton_EditP.Name = "OKButton_EditP";
+            this.OKButton_EditP.Size = new System.Drawing.Size(79, 28);
+            this.OKButton_EditP.TabIndex = 13;
+            this.OKButton_EditP.Text = "OK";
+            this.OKButton_EditP.UseVisualStyleBackColor = true;
+            // 
+            // dateTimePickerReg_EditP
+            // 
+            this.dateTimePickerReg_EditP.CustomFormat = "dd-MM-yyy";
+            this.dateTimePickerReg_EditP.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePickerReg_EditP.Location = new System.Drawing.Point(135, 226);
+            this.dateTimePickerReg_EditP.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.dateTimePickerReg_EditP.Name = "dateTimePickerReg_EditP";
+            this.dateTimePickerReg_EditP.Size = new System.Drawing.Size(110, 23);
+            this.dateTimePickerReg_EditP.TabIndex = 11;
+            this.dateTimePickerReg_EditP.Value = new System.DateTime(2021, 2, 5, 1, 7, 54, 0);
+            // 
+            // textBoxEmail_EditP
+            // 
+            this.textBoxEmail_EditP.Location = new System.Drawing.Point(135, 120);
+            this.textBoxEmail_EditP.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.textBoxEmail_EditP.Name = "textBoxEmail_EditP";
+            this.textBoxEmail_EditP.Size = new System.Drawing.Size(205, 23);
+            this.textBoxEmail_EditP.TabIndex = 10;
+            // 
+            // textBoxLname_EditP
+            // 
+            this.textBoxLname_EditP.Location = new System.Drawing.Point(135, 85);
+            this.textBoxLname_EditP.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.textBoxLname_EditP.Name = "textBoxLname_EditP";
+            this.textBoxLname_EditP.Size = new System.Drawing.Size(205, 23);
+            this.textBoxLname_EditP.TabIndex = 8;
+            // 
+            // textBoxFname_EditP
+            // 
+            this.textBoxFname_EditP.Location = new System.Drawing.Point(135, 46);
+            this.textBoxFname_EditP.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.textBoxFname_EditP.Name = "textBoxFname_EditP";
+            this.textBoxFname_EditP.Size = new System.Drawing.Size(205, 23);
+            this.textBoxFname_EditP.TabIndex = 7;
+            // 
+            // birthLabel_EditP
+            // 
+            this.birthLabel_EditP.Location = new System.Drawing.Point(44, 194);
+            this.birthLabel_EditP.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.birthLabel_EditP.Name = "birthLabel_EditP";
+            this.birthLabel_EditP.Size = new System.Drawing.Size(84, 17);
+            this.birthLabel_EditP.TabIndex = 6;
+            this.birthLabel_EditP.Text = "Birth Date";
+            // 
+            // gpaLabel_EditP
+            // 
+            this.gpaLabel_EditP.Location = new System.Drawing.Point(44, 270);
+            this.gpaLabel_EditP.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.gpaLabel_EditP.Name = "gpaLabel_EditP";
+            this.gpaLabel_EditP.Size = new System.Drawing.Size(84, 17);
+            this.gpaLabel_EditP.TabIndex = 5;
+            this.gpaLabel_EditP.Text = "GPA";
+            // 
+            // regLabel_EditP
+            // 
+            this.regLabel_EditP.Location = new System.Drawing.Point(44, 232);
+            this.regLabel_EditP.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.regLabel_EditP.Name = "regLabel_EditP";
+            this.regLabel_EditP.Size = new System.Drawing.Size(84, 17);
+            this.regLabel_EditP.TabIndex = 4;
+            this.regLabel_EditP.Text = "Reg. Date";
+            // 
+            // emailLabel_EditP
+            // 
+            this.emailLabel_EditP.Location = new System.Drawing.Point(44, 126);
+            this.emailLabel_EditP.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.emailLabel_EditP.Name = "emailLabel_EditP";
+            this.emailLabel_EditP.Size = new System.Drawing.Size(84, 17);
+            this.emailLabel_EditP.TabIndex = 3;
+            this.emailLabel_EditP.Text = "Email";
+            // 
+            // lnameLabel_EditP
+            // 
+            this.lnameLabel_EditP.Location = new System.Drawing.Point(44, 85);
+            this.lnameLabel_EditP.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lnameLabel_EditP.Name = "lnameLabel_EditP";
+            this.lnameLabel_EditP.Size = new System.Drawing.Size(84, 17);
+            this.lnameLabel_EditP.TabIndex = 1;
+            this.lnameLabel_EditP.Text = "Last name";
+            // 
+            // fnameLabel_EditP
+            // 
+            this.fnameLabel_EditP.Location = new System.Drawing.Point(44, 46);
+            this.fnameLabel_EditP.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.fnameLabel_EditP.Name = "fnameLabel_EditP";
+            this.fnameLabel_EditP.Size = new System.Drawing.Size(84, 17);
+            this.fnameLabel_EditP.TabIndex = 0;
+            this.fnameLabel_EditP.Text = "First name";
+            // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(982, 566);
+            this.ClientSize = new System.Drawing.Size(1146, 653);
+            this.Controls.Add(this.editPanel);
+            this.Controls.Add(this.addPanel);
             this.Controls.Add(this.editButton);
             this.Controls.Add(this.totalStudentsLabel);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.removeStudentButton);
             this.Controls.Add(this.addStudentButton);
             this.Controls.Add(this.dataGridView1);
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "MainForm";
             this.Text = "Student Management System";
             this.Load += new System.EventHandler(this.MainForm_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize) (this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize) (this.dataGridView1)).EndInit();
+            this.addPanel.ResumeLayout(false);
+            this.addPanel.PerformLayout();
+            this.groupBox1_AddP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGPA_AddP)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.editPanel.ResumeLayout(false);
+            this.editPanel.PerformLayout();
+            this.groupBox1_EditP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGPA_EditP)).EndInit();
             this.ResumeLayout(false);
+
         }
 
         private System.Windows.Forms.Button editButton;
 
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton maleRadioButton;
-        private System.Windows.Forms.RadioButton femaleRadioButton;
-        private System.Windows.Forms.RadioButton otherRadioButton;
+        private System.Windows.Forms.GroupBox groupBox1_AddP;
+        private System.Windows.Forms.RadioButton maleRadioButton_AddP;
+        private System.Windows.Forms.RadioButton femaleRadioButton_AddP;
+        private System.Windows.Forms.RadioButton otherRadioButton_AddP;
 
-        private System.Windows.Forms.Label genderLabel;
+        private System.Windows.Forms.Label genderLabel_AddP;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton3;
@@ -398,33 +679,53 @@ namespace student_management_system.Forms
 
         private System.Windows.Forms.DataGridView dataGridView1;
 
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.NumericUpDown numericUpDownGPA_AddP;
 
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dateTimePickerBirth_AddP;
 
-        private System.Windows.Forms.Button clearButton;
+        private System.Windows.Forms.Button clearButton_AddP;
 
-        private System.Windows.Forms.Button addButton;
-        private System.Windows.Forms.Button cancelButton;
+        private System.Windows.Forms.Button addButton_AddP;
+        private System.Windows.Forms.Button cancelButton_AddP;
         
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateTimePickerReg_AddP;
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBoxFname_AddP;
+        private System.Windows.Forms.TextBox textBoxLname_AddP;
+        private System.Windows.Forms.TextBox textBoxEmail_AddP;
 
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label gpaLabel_AddP;
+        private System.Windows.Forms.Label birthLabel_AddP;
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label fnameLabel_AddP;
+        private System.Windows.Forms.Label lnameLabel_AddP;
+        private System.Windows.Forms.Label emailLabel_AddP;
+        private System.Windows.Forms.Label regLabel_AddP;
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel addPanel;
 
         private System.Windows.Forms.Button addStudentButton;
         private System.Windows.Forms.Button removeStudentButton;
+        private Panel editPanel;
+        private GroupBox groupBox1_EditP;
+        private RadioButton otherRadioButton_EditP;
+        private RadioButton maleRadioButton_EditP;
+        private RadioButton femaleRadioButton_EditP;
+        private Label genderLabel_EditP;
+        private NumericUpDown numericUpDownGPA_EditP;
+        private DateTimePicker dateTimePickerBirth_EditP;
+        private Button cancelButton_EditP;
+        private Button OKButton_EditP;
+        private DateTimePicker dateTimePickerReg_EditP;
+        private TextBox textBoxEmail_EditP;
+        private TextBox textBoxLname_EditP;
+        private TextBox textBoxFname_EditP;
+        private Label birthLabel_EditP;
+        private Label gpaLabel_EditP;
+        private Label regLabel_EditP;
+        private Label emailLabel_EditP;
+        private Label lnameLabel_EditP;
+        private Label fnameLabel_EditP;
 
         public DataGridView DataGridView1
         {

@@ -2,7 +2,6 @@
 using System.Data;
 using System.Drawing;
 using System.Reflection;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using student_management_system.Controller;
 
@@ -48,15 +47,15 @@ namespace student_management_system.Forms
 
         private void cancelButton_Click(object sender, EventArgs e)
         {
-            panel1.Hide();
+            addPanel.Hide();
             dataGridView1.Enabled = true;
         }
 
         private void addStudentButton_Click(object sender, EventArgs e)
         {
-            if (!panel1.Visible)
+            if (!addPanel.Visible)
             {
-                panel1.Show();
+                addPanel.Show();
                 removeStudentButton.Enabled = false;
                 dataGridView1.Enabled = false;
                 dataGridView1.ClearSelection();
@@ -64,7 +63,7 @@ namespace student_management_system.Forms
             }
             else
             {
-                panel1.Hide();
+                addPanel.Hide();
                 dataGridView1.Enabled = true;
             }
 
@@ -77,26 +76,26 @@ namespace student_management_system.Forms
 
         private void ClearDataInAddStudentPanel()
         {
-            textBox1.Text = "";
-            textBox2.Text = "";
-            textBox4.Text = "";
-            maleRadioButton.Checked = true;
-            numericUpDown2.Value = Decimal.Zero;
-            dateTimePicker1.Value = DateTime.Now;
-            dateTimePicker2.Value = new DateTime(2003, 01, 01);
+            textBoxFname_AddP.Text = "";
+            textBoxLname_AddP.Text = "";
+            textBoxEmail_AddP.Text = "";
+            maleRadioButton_AddP.Checked = true;
+            numericUpDownGPA_AddP.Value = Decimal.Zero;
+            dateTimePickerReg_AddP.Value = DateTime.Now;
+            dateTimePickerBirth_AddP.Value = new DateTime(2003, 01, 01);
         }
 
         private void addButton_Click(object sender, EventArgs e)
         {
             dataGridView1.Enabled = true;
 
-            string firstName = textBox1.Text;
-            string lastName = textBox2.Text;
-            string email = textBox4.Text;
-            string gender = maleRadioButton.Checked ? "Male" : femaleRadioButton.Checked ? "Female" : "Other";
-            string birthDate = string.Format(dateTimePicker2.Value.ToString("yyyy-MM-dd"));
-            string regDate = string.Format(dateTimePicker1.Value.ToString("yyyy-MM-dd"));
-            string gpa = numericUpDown2.Text;
+            string firstName = textBoxFname_AddP.Text;
+            string lastName = textBoxLname_AddP.Text;
+            string email = textBoxEmail_AddP.Text;
+            string gender = maleRadioButton_AddP.Checked ? "Male" : femaleRadioButton_AddP.Checked ? "Female" : "Other";
+            string birthDate = string.Format(dateTimePickerBirth_AddP.Value.ToString("yyyy-MM-dd"));
+            string regDate = string.Format(dateTimePickerReg_AddP.Value.ToString("yyyy-MM-dd"));
+            string gpa = numericUpDownGPA_AddP.Text;
 
             string query
                 = "INSERT INTO students (firstName, lastName, email, gender, birthDate, regDate, gpa) VALUES (" +
@@ -113,7 +112,7 @@ namespace student_management_system.Forms
             else
             {
                 UpdateDataGrid();
-                panel1.Hide();
+                addPanel.Hide();
                 ClearDataInAddStudentPanel();
                 dataGridView1.ClearSelection();
                 dataGridView1.Rows[^1].Selected = true;
