@@ -33,8 +33,8 @@ namespace student_management_system.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            this.addStudentButton = new System.Windows.Forms.Button();
-            this.removeStudentButton = new System.Windows.Forms.Button();
+            this.addButton = new System.Windows.Forms.Button();
+            this.removeButton = new System.Windows.Forms.Button();
             this.addPanel = new System.Windows.Forms.Panel();
             this.groupBox1_AddP = new System.Windows.Forms.GroupBox();
             this.otherRadioButton_AddP = new System.Windows.Forms.RadioButton();
@@ -91,27 +91,27 @@ namespace student_management_system.Forms
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGPA_EditP)).BeginInit();
             this.SuspendLayout();
             // 
-            // addStudentButton
+            // addButton
             // 
-            this.addStudentButton.Location = new System.Drawing.Point(35, 24);
-            this.addStudentButton.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.addStudentButton.Name = "addStudentButton";
-            this.addStudentButton.Size = new System.Drawing.Size(168, 39);
-            this.addStudentButton.TabIndex = 3;
-            this.addStudentButton.Text = "Add student";
-            this.addStudentButton.UseVisualStyleBackColor = true;
-            this.addStudentButton.Click += new System.EventHandler(this.addStudentButton_Click);
+            this.addButton.Location = new System.Drawing.Point(35, 24);
+            this.addButton.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.addButton.Name = "addButton";
+            this.addButton.Size = new System.Drawing.Size(168, 39);
+            this.addButton.TabIndex = 3;
+            this.addButton.Text = "Add student";
+            this.addButton.UseVisualStyleBackColor = true;
+            this.addButton.Click += new System.EventHandler(this.addButton_Click);
             // 
-            // removeStudentButton
+            // removeButton
             // 
-            this.removeStudentButton.Location = new System.Drawing.Point(35, 70);
-            this.removeStudentButton.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.removeStudentButton.Name = "removeStudentButton";
-            this.removeStudentButton.Size = new System.Drawing.Size(168, 39);
-            this.removeStudentButton.TabIndex = 4;
-            this.removeStudentButton.Text = "Remove student";
-            this.removeStudentButton.UseVisualStyleBackColor = true;
-            this.removeStudentButton.Click += new System.EventHandler(this.removeStudentButton_Click);
+            this.removeButton.Location = new System.Drawing.Point(35, 70);
+            this.removeButton.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.removeButton.Name = "removeButton";
+            this.removeButton.Size = new System.Drawing.Size(168, 39);
+            this.removeButton.TabIndex = 4;
+            this.removeButton.Text = "Remove student";
+            this.removeButton.UseVisualStyleBackColor = true;
+            this.removeButton.Click += new System.EventHandler(this.removeButton_Click);
             // 
             // addPanel
             // 
@@ -234,7 +234,7 @@ namespace student_management_system.Forms
             this.clearButton_AddP.TabIndex = 15;
             this.clearButton_AddP.Text = "Clear";
             this.clearButton_AddP.UseVisualStyleBackColor = true;
-            this.clearButton_AddP.Click += new System.EventHandler(this.clearButton_Click);
+            this.clearButton_AddP.Click += new System.EventHandler(this.clearButton_AddP_Click);
             // 
             // cancelButton_AddP
             // 
@@ -245,7 +245,7 @@ namespace student_management_system.Forms
             this.cancelButton_AddP.TabIndex = 14;
             this.cancelButton_AddP.Text = "Cancel";
             this.cancelButton_AddP.UseVisualStyleBackColor = true;
-            this.cancelButton_AddP.Click += new System.EventHandler(this.cancelButton_Click);
+            this.cancelButton_AddP.Click += new System.EventHandler(this.cancelButton_AddP_Click);
             // 
             // addButton_AddP
             // 
@@ -256,7 +256,7 @@ namespace student_management_system.Forms
             this.addButton_AddP.TabIndex = 13;
             this.addButton_AddP.Text = "Add";
             this.addButton_AddP.UseVisualStyleBackColor = true;
-            this.addButton_AddP.Click += new System.EventHandler(this.addButton_Click);
+            this.addButton_AddP.Click += new System.EventHandler(this.addButton_AddP_Click);
             // 
             // dateTimePickerReg_AddP
             // 
@@ -350,14 +350,21 @@ namespace student_management_system.Forms
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.InactiveCaption;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dataGridView1.Location = new System.Drawing.Point(234, 14);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 60;
-            this.dataGridView1.Size = new System.Drawing.Size(834, 522);
+            this.dataGridView1.RowHeadersWidth = 50;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(852, 522);
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_RowEnter);
             this.dataGridView1.RowLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_RowLeave);
@@ -412,6 +419,7 @@ namespace student_management_system.Forms
             this.editButton.TabIndex = 7;
             this.editButton.Text = "Edit Student";
             this.editButton.UseVisualStyleBackColor = true;
+            this.editButton.Click += new System.EventHandler(this.editButton_Click);
             // 
             // editPanel
             // 
@@ -533,6 +541,7 @@ namespace student_management_system.Forms
             this.cancelButton_EditP.TabIndex = 14;
             this.cancelButton_EditP.Text = "Cancel";
             this.cancelButton_EditP.UseVisualStyleBackColor = true;
+            this.cancelButton_EditP.Click += new System.EventHandler(this.cancelButton_EditP_Click);
             // 
             // OKButton_EditP
             // 
@@ -543,6 +552,7 @@ namespace student_management_system.Forms
             this.OKButton_EditP.TabIndex = 13;
             this.OKButton_EditP.Text = "OK";
             this.OKButton_EditP.UseVisualStyleBackColor = true;
+            this.OKButton_EditP.Click += new System.EventHandler(this.OKButton_EditP_Click);
             // 
             // dateTimePickerReg_EditP
             // 
@@ -643,8 +653,8 @@ namespace student_management_system.Forms
             this.Controls.Add(this.addPanel);
             this.Controls.Add(this.editButton);
             this.Controls.Add(this.totalStudentsLabel);
-            this.Controls.Add(this.removeStudentButton);
-            this.Controls.Add(this.addStudentButton);
+            this.Controls.Add(this.removeButton);
+            this.Controls.Add(this.addButton);
             this.Controls.Add(this.dataGridView1);
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "MainForm";
@@ -704,8 +714,8 @@ namespace student_management_system.Forms
 
         private System.Windows.Forms.Panel addPanel;
 
-        private System.Windows.Forms.Button addStudentButton;
-        private System.Windows.Forms.Button removeStudentButton;
+        private System.Windows.Forms.Button addButton;
+        private System.Windows.Forms.Button removeButton;
         private Panel editPanel;
         private GroupBox groupBox1_EditP;
         private RadioButton otherRadioButton_EditP;
